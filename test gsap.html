@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gsap Test</title>
+  </head>
+  <body>
+    <div class="container d-flex">
+      <div class="col-5 section1 text-center">
+        <video autoplay loop muted playsinline width="470" id="vd">
+          <source src="Source.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-- arcordion -->
+      <div class="col-6 type px-5">
+        <div class="col" id="text1">
+          <div class="box1 d-flex p-4">
+            <img src="img/Asset 2.png" width="50px" height="50" class="icon me-4" alt="" />
+            <p id="title">Select your bank and simply enter your online banking username and password. After that you will be shown all your accounts and available funds.</p>
+          </div>
+        </div>
+        <div class="col py-3" id="text2">
+          <div class="box1 d-flex p-4">
+            <img src="img/Asset 3.png" width="50px" height="50" class="icon me-4" alt="" />
+            <p id="title">Choose the account you would like to pay with.</p>
+          </div>
+        </div>
+        <div class="col" id="text3">
+          <div class="box1 d-flex p-4">
+            <img src="img/Asset 4.png" width="50px" height="50" class="icon me-4" alt="" />
+            <p id="title">Sign the electronic PAD agreement with a click, and you have completed the transfer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+    <script>
+      let tl = gsap.timeline({ repeat: -1 });
+
+      tl.from('#text1', { duration: 0.5, opacity: 1 });
+      tl.to('#text1', { opacity: 0.5, color: '#bfbfbf', duration: 1 }, '<5');
+
+      tl.from('#text2', { duration: 1, opacity: 0 }, 5);
+      tl.to('#text2', { opacity: 0.5, color: '#bfbfbf', duration: 0.5 }, '<11');
+
+      tl.from('#text3', { duration: 1, opacity: 0 }, 16);
+      tl.from('#text4', { opacity: 0 }, 24);
+    </script>
+  </body>
+</html>
